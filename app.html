@@ -28,16 +28,16 @@
 	    const latitude = place.geometry.coordinates[1];
 	    const longitude = place.geometry.coordinates[0];
         // just add trees of selected area
-        if(latitude < maxLat && latitude > minLat && longitude < maxLon && longitude > minLon){
-           
+        /*if(latitude < maxLat && latitude > minLat && longitude < maxLon && longitude > minLon){
+           */
             const icon = document.createElement('a-text');
 	       icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
            icon.setAttribute('look-at', '[gps-camera]');
            icon.setAttribute('scale', '4 4 4');
             icon.setAttribute('value', 'X');
 	       scene.appendChild(icon);     
-       }
-        else{};
+      // }
+    //    else{};
       });
       distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distance');
     
@@ -52,9 +52,9 @@
     <a-scene cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;"
       raycaster="objects: [clickable];" embedded arjs>
        
-    
-	<a-camera gps-camera="simulateLatitude: 51.963538; simulateLongitude: 7.63436" rotation-reader> </a-camera>
-	<!--<a-camera gps-camera rotation-reader> </a-camera> -->
+    <!--
+	<a-camera gps-camera="simulateLatitude: 51.963538; simulateLongitude: 7.63436" rotation-reader> </a-camera> -->
+	<a-camera gps-camera rotation-reader> </a-camera>
        
    </a-scene>
     
