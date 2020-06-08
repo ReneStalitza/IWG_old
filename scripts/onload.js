@@ -28,6 +28,8 @@ window.onload = () => {
                 icon.setAttribute('look-at', '[gps-camera]');
                 icon.setAttribute('scale', '4 4 4');
                 icon.setAttribute('value', 'X');
+                icon.setAttribute('geometry', 'primitive: ring; radiusInner: 0.11; radiusOuter: 0.14');
+                icon.setAttribute('align', 'center');
                 if (species == "" || species == undefined) {
                     icon.setAttribute('species', rdmSpecies());
                 } else {
