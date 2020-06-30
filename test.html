@@ -12,7 +12,7 @@
     
     <script src="scripts/randomTreeType.js"></script>
     <script src="scripts/onload.js"></script>
-
+    
 <body style="margin: 0; overflow: hidden;">
   <a-scene
     cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;"
@@ -21,8 +21,9 @@
     embedded
     arjs="sourceType: webcam; debugUIEnabled: false;"
   >
-    <a-camera gps-camera="maxDistance: 200" rotation-reader> </a-camera>
-  </a-scene>
+    <a-camera gps-camera="simulateLatitude: 51.96317; simulateLongitude: 7.634446;maxDistance: 20" rotation-reader> </a-camera>
+ </a-scene>
+    
     
     <div class="center">
     <div id="infobox">
@@ -53,6 +54,7 @@
         <div id="info">
             <ul id="myList"></ul>
             </div>    
+             
         </div>
         
      </div>    
@@ -60,3 +62,5 @@
 </body>
 
 </html>
+
+
